@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3f7acd57-f902-462a-9010-96a5ad7e49d4" name="LaravelRetry" url="http://39.104.97.255">
+        <fileTransfer host="39.104.97.255" port="22" rootFolder="/www/wwwroot/default/Retry" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
