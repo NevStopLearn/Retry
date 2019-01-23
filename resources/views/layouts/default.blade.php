@@ -11,6 +11,8 @@
 <body>
     @include('layouts._header')
     <div class="container">
+        @include('default._messages')
+
         @yield('content')
 
         @include('layouts._footer')
