@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreUserPost;
 
 class UsersController extends Controller
 {
@@ -30,12 +31,12 @@ class UsersController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param StoreUserPost $request
+     * @return void
      */
-    public function store(Request $request)
+    public function store(StoreUserPost $request)
     {
-        //
+
     }
 
     /**
