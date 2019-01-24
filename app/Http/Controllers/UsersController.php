@@ -144,6 +144,11 @@ class UsersController extends Controller
         });
     }
 
+    /**
+     * 用户邮箱激活
+     * @param $token
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function confirmEmail($token)
     {
         $user = User::where('activation_token',$token)->firstOrFail();
