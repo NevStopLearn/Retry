@@ -22,3 +22,4 @@ Route::delete('logout', 'SessionsController@destroy')->name('logout');
 Route::resource('users','UsersController')->names([
     'create'    => 'users.signup'
 ]);
+Route::get('signup/confirm/{token}','UsersController@confirmEmail')->name('users.confirmEmail');
