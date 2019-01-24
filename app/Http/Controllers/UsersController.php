@@ -117,11 +117,15 @@ class UsersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param User $user
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        $this->authorize('destroy',$user);
+        $user->delete();
+        session()->flash('success', '成功删除用户！');
+        return back();
     }
 }
