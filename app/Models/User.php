@@ -88,7 +88,7 @@ class User extends Authenticatable
     }
 
     /**
-     * 判断当前用户是否关注XX
+     * 判断当前用户是否已关注XX
      * @param $user_id
      * @return mixed
      */

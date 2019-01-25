@@ -21,7 +21,7 @@ Route::get('login', 'SessionsController@create')->name('login');
 Route::post('login', 'SessionsController@store')->name('login');
 Route::delete('logout', 'SessionsController@destroy')->name('logout');
 
-#用户CRUD路由
+#用户CRUD路由，邮箱验证，关注和被关注
 Route::resource('users','UsersController')->names([
     'create'    => 'users.signup'
 ]);
@@ -35,4 +35,9 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
 
+#微博的创建和删除
 Route::resource('statuses','StatusesController',['only' => ['store', 'destroy']]);
+
+#关注和取消关注
+Route::post('/users/followers/{user}', 'FollowersController@store')->name('followers.store');
+Route::delete('/users/followers/{user}', 'FollowersController@destroy')->name('followers.destroy');
