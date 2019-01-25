@@ -26,6 +26,8 @@ Route::resource('users','UsersController')->names([
     'create'    => 'users.signup'
 ]);
 Route::get('signup/confirm/{token}','UsersController@confirmEmail')->name('users.confirmEmail');
+Route::get('/users/{user}/followings', 'UsersController@followings')->name('users.followings');
+Route::get('/users/{user}/followers', 'UsersController@followers')->name('users.followers');
 
 #密码重置路由
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
